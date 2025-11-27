@@ -6,15 +6,15 @@ def get_input(word_input: str):
 
 
 noun1 = get_input("noun1")
-verb1 = get_input("verb1")
+subject1 = get_input("subject1")
 noun2 = get_input("noun2")
-verb2 = get_input("verb2")
+subject2 = get_input("subject2")
 
 story = f"""
-Once upon a time there was {noun1}, who was a {verb1} teacher
-and his student {noun2} who was a {verb2} programmer. 
+Once upon a time there was {noun1}, who was a {subject1} teacher
+and his student {noun2} who was {subject2} student. 
 
-One day they were going for institute, and they had a conversation:
+One day they were going for PI, and they had a conversation:
 
 {noun1}: Ei chele tmi 1st semester na?
 {noun2}: Assalamu-Aalaikum sir, ji sir!
