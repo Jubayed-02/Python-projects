@@ -1,3 +1,5 @@
+# funny story creation using python
+
 import time
 
 def get_input(word_input: str):
