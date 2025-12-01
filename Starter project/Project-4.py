@@ -40,7 +40,7 @@ def run_game():
 
         if guess not in word:
             tries -= 1
-            print(f"You have only {tries} reamining")
+            print(f"You have only {tries} guesses reamining")
             
             if tries == 0:
                 print(f"\nthe word was: {word}")
