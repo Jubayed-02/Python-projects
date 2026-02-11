@@ -1,4 +1,5 @@
-import random 
+import random
+
 
 def RPS():
     # welcome message for the player
@@ -8,28 +9,34 @@ def RPS():
     bot_point = 0
     player_point = 0
 
-    while True:
-        player_move: str = input("rock/paper/scissors >> ").lower() # user input in lower case !!!
-        valid_moves = ["rock", "paper", "scissors"] # valid moves of the game
-        winning_con = {"rock": "scissors", "paper":"rock", "scissors": "paper"} #lookup table for now
+    # valid moves of the game
+    valid_moves = ["rock", "paper", "scissors"]  
 
-        bot_move = random.choice(valid_moves) # a random move for the bot
+    # lookup table for now
+    winning_con = {"rock": "scissors", "paper": "rock",
+                   "scissors": "paper"}  
+    while True:
+        # user input in lower case !!!
+        player_move: str = input("rock/paper/scissors >> ").lower()
 
         # to exit the game
         if player_move == "exit":
             print("\nThanks for playing the game!\nHave a nice day!")
             break
 
+        # a random move for the bot
+        bot_move = random.choice(valid_moves)
+
         # to check the input is valid or not
         if player_move not in valid_moves:
             print("invalid move!")
             continue
-        
-        print("-"*20) # for styling
+
+        print("-"*20)  # for styling
 
         # displaying moves
-        print(f"You: {player_move}") # player's move
-        print(f"bot move: {bot_move}") # bot's move 
+        print(f"You: {player_move}")  # player's move
+        print(f"bot move: {bot_move}")  # bot's move
 
         # game condition
         if player_move == bot_move:
@@ -41,13 +48,15 @@ def RPS():
             print("bot won!")
             bot_point += 1
 
-        # score 
+        # score
         print(f"\nPlayer's point: {player_point}")
-        print(f"Bot point: {bot_point}")    
+        print(f"Bot point: {bot_point}")
+
+        # condition to quit the game
+        print("** enter 'exit' to quit the game anytime you want! **")
         
-        print("** enter 'exit' to quit the game anytime you want! **") # condition to quit the game
-        print("-"*20) # for styling
+        print("-" * 20)  # for styling
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     RPS()
